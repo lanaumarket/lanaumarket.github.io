@@ -83,34 +83,44 @@ img {
 }
 
 .site-menu summary, .gallery-shortcut {
-    display: block;
+    display: grid;
     cursor: pointer;
     width: 48px;
     height: 48px;
-    background-position: center;
-    background-repeat: no-repeat;
 }
 
 .site-menu summary {
-    background-image: url("images/menu.png");
-    background-size: 30px 23px;
+    --icon: url("images/menu.png");
+    --active-icon: url("images/menu-active.png");
+    --icon-size: 30px 23px;
 }
 
 .gallery-shortcut {
-    background-image: url("images/gallery.png");
-    background-size: contain;
+    --icon: url("images/gallery.png");
+    --active-icon: url("images/gallery-active.png");
+    --icon-size: contain;
 }
 
 .site-menu summary::-webkit-details-marker {
     display: none;
 }
 
-.site-menu[open] summary, .site-menu summary:hover {
-    background-image: url("images/menu-active.png");
+.site-menu summary::before, .site-menu summary::after,
+.gallery-shortcut::before, .gallery-shortcut::after {
+    content: "";
+    grid-area: 1 / 1;
+    background: var(--icon) center / var(--icon-size) no-repeat;
+    opacity: calc(1 - var(--active-icon-opacity, 0));
+    pointer-events: none;
 }
 
-.gallery-shortcut:hover {
-    background-image: url("images/gallery-active.png");
+.site-menu summary::after, .gallery-shortcut::after {
+    background-image: var(--active-icon);
+    opacity: var(--active-icon-opacity, 0);
+}
+
+.site-menu[open] summary, .site-menu summary:hover, .gallery-shortcut:hover {
+    --active-icon-opacity: 1;
 }
 
 .site-menu nav {
@@ -278,6 +288,28 @@ img {
 
 .visit {
     margin-block: clamp(64px, 12vw, 150px) 48px;
+}
+
+.visit-guide {
+    width: min(640px, calc(100% - 40px));
+    margin: 0 auto 60px;
+    line-height: 1.45;
+    overflow-wrap: anywhere;
+}
+
+.visit-guide h2 {
+    font-size: clamp(26px, 3.5vw, 34px);
+    line-height: 1.1;
+}
+
+.visit-guide h3 {
+    margin-top: 1.2rem;
+    font-size: 1.2em;
+    line-height: 1.2;
+}
+
+.visit-guide p {
+    margin-top: 0.45rem;
 }
 
 .follow {
