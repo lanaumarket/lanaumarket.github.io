@@ -4,9 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>La Nau | Mercat de segona mà a Vilanova i la Geltrú</title>
-    <meta name="description" content="Descobreix sis plantes de mobles, decoració, antiguitats i col·leccionisme a La Nau, el mercat de segona mà de Vilanova i la Geltrú. Compra, ven o lloga un espai.">
+    <meta name="description" content="Visita La Nau a Vilanova i la Geltrú: sis plantes de mobles, decoració i antiguitats de segona mà. Compra, ven o reserva una parcel·la.">
     <meta name="robots" content="max-image-preview:large">
     <link rel="canonical" href="https://www.lanaumercatsegonama.com/">
+    <link rel="author" href="humans.txt">
+    <link rel="describedby" href="llms.txt">
     <link rel="icon" href="favicon.ico" sizes="any">
     <link rel="preload" href="assets/fonts/cormorant-garamond.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="assets/site.css">
@@ -38,7 +40,23 @@
                 "url": "https://www.lanaumercatsegonama.com/",
                 "name": "La Nau Mercat de Segona Mà",
                 "inLanguage": "ca",
+                "alternateName": "La Nau",
                 "publisher": { "@id": "https://www.lanaumercatsegonama.com/#la-nau" }
+            },
+            {
+                "@type": "WebPage",
+                "@id": "https://www.lanaumercatsegonama.com/#pagina",
+                "url": "https://www.lanaumercatsegonama.com/",
+                "name": "La Nau | Mercat de segona mà a Vilanova i la Geltrú",
+                "inLanguage": "ca",
+                "isPartOf": { "@id": "https://www.lanaumercatsegonama.com/#web" },
+                "mainEntity": { "@id": "https://www.lanaumercatsegonama.com/#la-nau" },
+                "primaryImageOfPage": {
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.lanaumercatsegonama.com/assets/images/facana.webp",
+                    "width": 750,
+                    "height": 1000
+                }
             },
             {
                 "@type": "Store",
@@ -59,10 +77,10 @@
                     "addressCountry": "ES"
                 },
                 "openingHoursSpecification": [
-                    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Monday", "opens": "17:00", "closes": "20:00" },
-                    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "10:00", "closes": "13:00" },
-                    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "17:00", "closes": "20:00" },
-                    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "10:00", "closes": "14:00" }
+                    { "@type": "OpeningHoursSpecification", "dayOfWeek": "https://schema.org/Monday", "opens": "17:00", "closes": "20:00" },
+                    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["https://schema.org/Tuesday", "https://schema.org/Wednesday", "https://schema.org/Thursday", "https://schema.org/Friday"], "opens": "10:00", "closes": "13:00" },
+                    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["https://schema.org/Tuesday", "https://schema.org/Wednesday", "https://schema.org/Thursday", "https://schema.org/Friday"], "opens": "17:00", "closes": "20:00" },
+                    { "@type": "OpeningHoursSpecification", "dayOfWeek": "https://schema.org/Saturday", "opens": "10:00", "closes": "14:00" }
                 ],
                 "sameAs": [
                     "https://www.facebook.com/lanaumercatsegonama/",
@@ -78,10 +96,7 @@
     <div id="site-root">
         <header class="site-header">
             <details class="site-menu">
-                <summary aria-label="Menú">
-                    <img src="assets/images/menu.png" alt="" width="30" height="23">
-                    <img src="assets/images/menu-active.png" alt="" width="30" height="23">
-                </summary>
+                <summary aria-label="Menú"></summary>
                 <nav aria-label="Navegació principal">
                     <a href="./" aria-current="page">Inici</a>
                     <a href="#galeria">Galeria</a>
@@ -89,7 +104,7 @@
                 </nav>
             </details>
             <a class="site-logo" href="./">
-                <img src="assets/images/la-nau.png" alt="La Nau Mercat de Segona Mà" width="116" height="60" fetchpriority="high">
+                <img src="assets/images/la-nau-header.webp" alt="La Nau Mercat de Segona Mà" width="232" height="121">
             </a>
             <div class="site-reservations">
                 <a class="telephone" href="tel:+34664521125">664.521.125</a>
@@ -97,54 +112,57 @@
             </div>
         </header>
 
-        <a class="gallery-shortcut" href="#galeria" aria-label="Ves a la galeria">
-            <img src="assets/images/gallery.png" alt="" width="52" height="50">
-            <img src="assets/images/gallery-active.png" alt="" width="52" height="50">
-        </a>
+        <a class="gallery-shortcut" href="#galeria" aria-label="Ves a la galeria"></a>
         <nav class="social-rail" aria-label="Xarxes socials i correu">
-            <a href="https://www.facebook.com/lanaumercatsegonama/" aria-label="Facebook"><img src="assets/images/facebook.png" alt="" width="20" height="20"></a>
-            <a href="https://www.instagram.com/la_nau_mercat_segona_ma/" aria-label="Instagram"><img src="assets/images/instagram.png" alt="" width="20" height="20"></a>
-            <a href="mailto:mercatsegonamasitges@gmail.com" aria-label="Correu electrònic"><img src="assets/images/email.png" alt="" width="20" height="20"></a>
+            <a class="social-facebook" href="https://www.facebook.com/lanaumercatsegonama/" aria-label="Facebook"></a>
+            <a class="social-instagram" href="https://www.instagram.com/la_nau_mercat_segona_ma/" aria-label="Instagram"></a>
+            <a class="social-email" href="mailto:mercatsegonamasitges@gmail.com" aria-label="Correu electrònic"></a>
         </nav>
 
         <main id="contingut">
-            <section class="intro">
-                <h1>Ven allò que ja no necessites, compra allò que busques o, si ho prefereixes, lloga un espai i ven-ho tu mateix.</h1>
+            <section class="intro" aria-labelledby="titol-principal">
+                <h1 id="titol-principal">La Nau, mercat de segona mà a Vilanova i la Geltrú</h1>
+                <p>Ven allò que ja no necessites, compra allò que busques o, si ho prefereixes, lloga un espai i ven-ho tu mateix.</p>
             </section>
 
-            <section id="galeria" class="market-gallery" aria-labelledby="titol-galeria">
-                <h2 id="titol-galeria" class="visually-hidden">Galeria de La Nau</h2>
-                <figure>
-                    <img src="assets/images/camera-analogica.webp" alt="Càmera analògica negra i platejada" width="1000" height="776">
-                    <figcaption>Càmeres analògiques</figcaption>
-                </figure>
-                <figure>
-                    <img src="assets/images/facana.webp" alt="Façana de La Nau des de l’avinguda d’Eduard Toldrà" width="750" height="1000">
-                </figure>
-                <div class="gallery-intro">
-                    <p>Sis plantes de segona mà en decoració, antiguitats i col·leccionisme.</p>
-                    <a href="tel:+34664521125">Més informació al 664 521 125</a>
+            <section id="galeria" class="gallery" aria-labelledby="titol-galeria">
+                <h2 id="titol-galeria">Mobles, decoració i antiguitats de segona mà</h2>
+                <div class="market-gallery">
+                    <figure>
+                        <img src="assets/images/camera-analogica.webp" alt="Càmera analògica negra i platejada" width="1000" height="776" fetchpriority="high">
+                        <figcaption>Càmeres analògiques</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="assets/images/facana.webp"
+                             srcset="assets/images/facana-360.webp 360w, assets/images/facana-540.webp 540w, assets/images/facana.webp 750w"
+                             sizes="(max-width: 760px) calc((100vw - 58px) * 0.375), 330px"
+                             alt="Façana de La Nau des de l’avinguda d’Eduard Toldrà" width="750" height="1000">
+                    </figure>
+                    <div class="gallery-intro">
+                        <p>Sis plantes de segona mà en decoració, antiguitats i col·leccionisme.</p>
+                        <a href="tel:+34664521125">Truca per reservar una parcel·la</a>
+                    </div>
+                    <figure>
+                        <img src="assets/images/sofa.webp" alt="Detall d’un sofà gris amb estructura metàl·lica" width="1000" height="778" loading="lazy">
+                        <figcaption>Mobles</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="assets/images/antiguitats.webp" alt="Peces antigues i una cúpula de vidre sobre una taula" width="750" height="1000" loading="lazy">
+                        <figcaption>Antiguitats</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="assets/images/decoracio.webp" alt="Gerro de ceràmica amb decoració floral" width="1000" height="776" loading="lazy">
+                        <figcaption>Decoració</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="assets/images/musica.webp" alt="Equip de música al costat d’un paravent decorat" width="1000" height="776" loading="lazy">
+                        <figcaption>Música</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="assets/images/tamboret.webp" alt="Tamboret amb seient fosc i potes de fusta" width="749" height="1000" loading="lazy">
+                        <figcaption>Mobiliari</figcaption>
+                    </figure>
                 </div>
-                <figure>
-                    <img src="assets/images/sofa.webp" alt="Detall d’un sofà gris amb estructura metàl·lica" width="1000" height="778" loading="lazy">
-                    <figcaption>Mobles</figcaption>
-                </figure>
-                <figure>
-                    <img src="assets/images/antiguitats.webp" alt="Peces antigues i una cúpula de vidre sobre una taula" width="750" height="1000" loading="lazy">
-                    <figcaption>Antiguitats</figcaption>
-                </figure>
-                <figure>
-                    <img src="assets/images/decoracio.webp" alt="Gerro de ceràmica amb decoració floral" width="1000" height="776" loading="lazy">
-                    <figcaption>Decoració</figcaption>
-                </figure>
-                <figure>
-                    <img src="assets/images/musica.webp" alt="Equip de música al costat d’un paravent decorat" width="1000" height="776" loading="lazy">
-                    <figcaption>Música</figcaption>
-                </figure>
-                <figure>
-                    <img src="assets/images/tamboret.webp" alt="Tamboret amb seient fosc i potes de fusta" width="749" height="1000" loading="lazy">
-                    <figcaption>Mobiliari</figcaption>
-                </figure>
             </section>
 
             <p class="visit">Vine a veure’ns i descobreix tot això i molt més. T’hi esperem!</p>
@@ -155,25 +173,45 @@
         </main>
 
         <footer id="contacte" class="site-footer">
+            <h2>Horaris i contacte</h2>
             <div class="footer-columns">
-                <h2>La Nau.</h2>
-                <address>
-                    Av. d’Eduard Toldrà, 58<br>
-                    08800 Vilanova i la Geltrú<br>
-                    <a href="tel:+34664521125">Tel. 664 521 125</a>
-                </address>
                 <div>
-                    Dilluns: 17–20 h<br>
-                    De dimarts a divendres: 10–13 h i 17–20 h<br>
-                    Dissabte: 10–14 h<br>
-                    Diumenge: tancat
+                    <h3>Adreça</h3>
+                    <address>
+                        Avinguda d’Eduard Toldrà, 58<br>
+                        08800 Vilanova i la Geltrú<br>
+                        <a href="tel:+34664521125">Tel. 664 521 125</a><br>
+                        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Avinguda%20d%27Eduard%20Toldr%C3%A0%2C%2058%2C%2008800%20Vilanova%20i%20la%20Geltr%C3%BA">Com arribar a La Nau</a>
+                    </address>
                 </div>
                 <div>
-                    <p>Estigues al corrent de totes les nostres novetats!</p>
-                    <a class="contact-button" href="mailto:mercatsegonamasitges@gmail.com?subject=Novetats%20de%20La%20Nau">Demana rebre novetats</a>
+                    <h3>Horari del mercat</h3>
+                    <dl class="opening-hours">
+                        <div>
+                            <dt>Dilluns</dt>
+                            <dd><time datetime="17:00">17</time>–<time datetime="20:00">20</time> h</dd>
+                        </div>
+                        <div>
+                            <dt>De dimarts a divendres</dt>
+                            <dd><time datetime="10:00">10</time>–<time datetime="13:00">13</time> h i <time datetime="17:00">17</time>–<time datetime="20:00">20</time> h</dd>
+                        </div>
+                        <div>
+                            <dt>Dissabte</dt>
+                            <dd><time datetime="10:00">10</time>–<time datetime="14:00">14</time> h</dd>
+                        </div>
+                        <div>
+                            <dt>Diumenge</dt>
+                            <dd>Tancat</dd>
+                        </div>
+                    </dl>
+                </div>
+                <div>
+                    <h3>Novetats</h3>
+                    <p>Escriu-nos si vols rebre les novetats del mercat.</p>
+                    <a class="contact-button" href="mailto:info@lanaumercatsegonama.com?subject=Novetats%20de%20La%20Nau">Demana rebre novetats</a>
                 </div>
             </div>
-            <p class="copyright">© 2019 Cremaet.</p>
+            <p class="copyright">© 2026 Cremaet.</p>
         </footer>
     </div>
 </body>

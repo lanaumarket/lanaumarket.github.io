@@ -1,0 +1,13 @@
+/* TEAM */
+
+Projecte: La Nau Mercat de Segona Mà
+Contacte: info@lanaumercatsegonama.com
+Ubicació: Avinguda d’Eduard Toldrà, 58, 08800 Vilanova i la Geltrú
+
+/* SITE */
+
+Web: https://www.lanaumercatsegonama.com/
+Idioma: Català (ca)
+Estàndards: HTML i CSS
+Allotjament: GitHub Pages
+Crèdit original: Cremaet (© 2019)
