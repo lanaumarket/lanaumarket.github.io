@@ -1,0 +1,374 @@
+@font-face {
+    font-family: "Cormorant Garamond";
+    src: url("fonts/cormorant-garamond.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 300 700;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Raleway;
+    src: url("fonts/raleway.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+}
+
+:root {
+    color-scheme: light;
+    color: #090909;
+    background: #fff;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 19px;
+    font-weight: 500;
+    --content-width: 980px;
+    --sans-serif: Raleway, Arial, sans-serif;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body, figure, h1, h2, p {
+    margin: 0;
+}
+
+a {
+    color: inherit;
+    text-underline-offset: 0.16em;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.visually-hidden, .skip-link:not(:focus) {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
+
+.skip-link:focus {
+    position: fixed;
+    top: 0.5rem;
+    left: 0.5rem;
+    z-index: 5;
+    padding: 0.5rem;
+    background: #fff;
+}
+
+.site-header {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+    align-items: start;
+    min-height: 145px;
+    padding: 40px 24px 0;
+}
+
+.site-logo img {
+    width: 116px;
+}
+
+.site-menu {
+    position: absolute;
+    z-index: 2;
+    top: 104px;
+    left: 24px;
+}
+
+.site-menu summary, .gallery-shortcut {
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    width: 48px;
+    height: 48px;
+}
+
+.site-menu summary::-webkit-details-marker {
+    display: none;
+}
+
+.site-menu summary > img, .gallery-shortcut > img {
+    grid-area: 1 / 1;
+}
+
+.site-menu summary img + img, .gallery-shortcut img + img {
+    opacity: 0;
+}
+
+.site-menu[open] summary img + img,
+.site-menu summary:hover img + img,
+.gallery-shortcut:hover img + img {
+    opacity: 1;
+}
+
+.site-menu nav {
+    display: grid;
+    border: 1px solid #e4e4e4;
+    padding: 0.6rem 1rem;
+    background: #fff;
+    line-height: 1.65;
+}
+
+.site-menu nav a {
+    padding-block: 0.15rem;
+}
+
+.site-logo {
+    grid-column: 2;
+}
+
+.site-reservations {
+    grid-column: 3;
+    justify-self: end;
+    margin-top: 45px;
+    display: grid;
+    text-align: right;
+    font-size: 22px;
+    line-height: 1.2;
+}
+
+.site-reservations a {
+    text-decoration: none;
+}
+
+.site-reservations a:hover, .follow a:hover {
+    text-decoration: underline;
+}
+
+.site-reservations .telephone {
+    border-top: 1px solid #e4e4e4;
+    padding-top: 4px;
+    font-family: var(--sans-serif);
+    font-size: 12px;
+    letter-spacing: 0.09em;
+}
+
+.gallery-shortcut, .social-rail {
+    position: fixed;
+    z-index: 1;
+}
+
+.gallery-shortcut {
+    bottom: 64px;
+    left: 28px;
+}
+
+.social-rail {
+    top: 43%;
+    right: 24px;
+    display: grid;
+    gap: 5px;
+}
+
+.social-rail a {
+    display: grid;
+    width: 44px;
+    height: 44px;
+    place-items: center;
+}
+
+.intro, .visit {
+    max-width: 860px;
+    padding-inline: 24px;
+    margin-inline: auto;
+    text-align: center;
+    font-size: clamp(28px, 3.5vw, 36px);
+    line-height: 1;
+}
+
+.intro {
+    margin-top: 116px;
+    margin-bottom: 40px;
+}
+
+.intro h1 {
+    font: inherit;
+}
+
+.market-gallery {
+    width: min(var(--content-width), calc(100% - 150px));
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(40px, 7.8vw, 100px);
+    align-items: center;
+}
+
+.market-gallery figure {
+    position: relative;
+    aspect-ratio: 1;
+}
+
+.market-gallery img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.market-gallery figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0.05rem 0.45rem;
+    background: rgb(255 255 255 / 92%);
+    text-align: center;
+    white-space: nowrap;
+}
+
+.market-gallery figcaption::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 100%;
+    width: 1px;
+    height: 1rem;
+    background: currentColor;
+}
+
+.gallery-intro p {
+    margin-bottom: 0.45rem;
+    font-size: clamp(28px, 4vw, 44px);
+    line-height: 1;
+}
+
+.visit {
+    margin-block: clamp(64px, 12vw, 150px) 48px;
+}
+
+.follow {
+    background: #efefef;
+    padding: 50px 24px 60px;
+    text-align: center;
+}
+
+.follow h2, .site-footer h2 {
+    font-family: var(--sans-serif);
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.follow a {
+    display: inline-block;
+    margin-top: 0.9rem;
+    font-size: clamp(22px, 4.8vw, 28px);
+    text-decoration: none;
+}
+
+.site-footer {
+    width: min(var(--content-width), calc(100% - 150px));
+    margin-inline: auto;
+    padding-block: 75px 52px;
+    font-size: 17px;
+}
+
+.footer-columns {
+    display: grid;
+    grid-template-columns: auto 1fr 1.3fr 1.3fr;
+    gap: 1.4rem;
+}
+
+.footer-columns address {
+    font-style: normal;
+}
+
+.contact-button {
+    display: inline-block;
+    margin-top: 0.5em;
+    padding: 0.45em 0.9em;
+    color: #fff;
+    background: #090909;
+    text-decoration: none;
+}
+
+.contact-button:hover {
+    text-decoration: underline;
+}
+
+.copyright {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+@media (max-width: 760px) {
+    .site-header {
+        min-height: 110px;
+        padding: 24px 16px 0;
+        align-items: center;
+    }
+
+    .site-menu {
+        top: 32px;
+        left: 12px;
+    }
+
+    .site-reservations {
+        align-self: center;
+        margin-top: 0;
+        font-size: clamp(14px, 3.2vw, 20px);
+    }
+
+    .site-reservations .telephone {
+        display: none;
+    }
+
+    .gallery-shortcut {
+        display: none;
+    }
+
+    .social-rail {
+        position: static;
+        display: flex;
+        justify-content: center;
+    }
+
+    .intro {
+        margin-top: 32px;
+        margin-bottom: 32px;
+    }
+
+    .market-gallery, .site-footer {
+        width: calc(100% - 40px);
+    }
+
+    .market-gallery {
+        gap: 30px 18px;
+    }
+
+    .market-gallery figcaption {
+        font-size: 16px;
+    }
+
+    .market-gallery figcaption::before {
+        display: none;
+    }
+
+    .gallery-intro {
+        grid-column: 1 / -1;
+        text-align: center;
+    }
+
+    .market-gallery figure:last-child {
+        grid-column: 1 / -1;
+        width: min(60%, 350px);
+        justify-self: center;
+    }
+
+    .footer-columns {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+    }
+
+    .footer-columns h2 {
+        grid-column: 1 / -1;
+    }
+}
